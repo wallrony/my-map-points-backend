@@ -1,0 +1,14 @@
+version: "3.9"
+services: 
+  postgres:
+    build:
+      dockerfile: "docker/postgres.dockerfile"
+      context: ""
+
+    image: rony/postgres
+    container_name: my_map_points
+
+    restart: always
+
+    ports:
+      - "5432:5432"
